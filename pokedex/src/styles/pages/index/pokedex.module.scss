@@ -1,0 +1,124 @@
+/* Pokedex */
+.pokedex{
+  background-color: var(--red);
+  margin: 100px;
+
+
+
+  /* Left */
+  .pokedex_left{
+    width: 440px;
+
+
+    /* Top */
+    .pokedex_left_top{
+      width: 100%;
+      height: 120px;
+      -webkit-filter: drop-shadow(0px 8px 0px var(--redShadow));
+      filter: drop-shadow(0px 8px 0px var(--redShadow));
+      position: relative;
+      z-index: 9;
+
+
+      // Container
+      .pokedex_left_top_container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        -webkit-clip-path: polygon( 0 0, 100% 0, 100% 5rem, 19.5rem 5rem, 13.5rem 100%, 0 100% );
+        clip-path: polygon( 0 0, 100% 0, 100% 5rem, 19.5rem 5rem, 13.5rem 100%, 0 100% );
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        background-color: var(--red);
+        box-sizing: border-box;
+        padding: 20px;
+        position: relative;
+
+
+        /* Scan */
+        .pokedex_left_top_scan{
+          width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--blue);
+          border-radius: 50%;
+          box-sizing: border-box;
+          margin-right: 10px;
+          position: relative;
+
+          
+          &::before{
+            content: "";
+            width: 115%;
+            height: 115%;
+            border-radius: 50%;
+            border: 1px solid black;
+            background-color: var(--light_grey);
+            position: absolute;
+            z-index: -9;
+          }
+          &::after{
+            content: "";
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--light_blue);
+            position: absolute;
+            z-index: 9;
+          }
+
+        }
+
+
+        /* Small scans */
+        .pokedex_left_top_smallScans{
+          height: 100%;
+          padding: 0 3px;
+          position: relative;
+
+          &::after{
+            content: "";
+            width: 13px;
+            height: 13px;
+            display: block;
+            border: 1px solid black;
+            background-color: red;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+
+    
+    // Bottom
+    .pokedex_left_bottom{
+      padding: 30px;
+
+      /* Viewfinder */
+      .pokedex_left_bottom_viewfinder{
+        margin-top: 30px;
+        background-color: var(--light_grey);
+        border-radius: 3px;
+        padding: 25px;
+  
+  
+        /* Television */
+        .pokedex_left_bottom_viewfinder_television{
+          background-color: var(--dark_grey);
+          padding: 20px;
+  
+          img{
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
